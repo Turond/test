@@ -2,4 +2,10 @@
 
 {% block title %} Logowanie do kupy {% endblock %}
 
-{%block posts %} xddd loll {% endblock %}
+{%block posts %}
+    <form action="/login/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+{% endblock %}
