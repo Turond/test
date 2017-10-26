@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>pszczoly tak</title>
-</head>
-<body>
-<br>
+{% extends "blog/base.html" %}
+
+{% block title %} xd {% endblock %}
+
+{% block posts %}
+
 {% for post in posts %}
     <div>
         <p>published: {{ post.published_date }}</p>
@@ -13,5 +11,4 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
-</body>
-</html>
+{% endblock %}
