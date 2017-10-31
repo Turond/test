@@ -128,3 +128,4 @@ TEMPLATE_DIRS = (
     os.path.join(SETTINGS_PATH, 'templates'),
     "/.../leave_beave/django/contrib/admin/templates",
 )
+LOGIN_REDIRECT_URL = 'post_list'

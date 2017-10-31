@@ -12,6 +12,7 @@ def loginp(request):
             username = form.cleaned_data.get('username')
             user_password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=user_password)
+            login(request, user)
             if user is not None:
                 login(request, user)
                 return redirect('post_list')
