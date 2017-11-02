@@ -31,13 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'blog',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
 ]
 
 MIDDLEWARE = [
@@ -124,8 +124,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'public', 'static')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-TEMPLATE_DIRS = (
-    os.path.join(SETTINGS_PATH, 'templates'),
-    "/.../leave_beave/django/contrib/admin/templates",
-)
+#TEMPLATE_DIRS = (
+#    os.path.join(SETTINGS_PATH, 'templates'),
+#    "/.../leave_beave/django/contrib/admin/templates",
+#)
 LOGIN_REDIRECT_URL = 'post_list'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
