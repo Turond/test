@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import Post
 from django.utils import timezone
-from django.contrib.auth import authenticate, login, logout
-from .forms import UserLoginForm, UserLoginFormLegit
+from django.contrib.auth import authenticate, logout
+from .forms import UserLoginForm
 # Create your views here.
 
 def post_list(request):
